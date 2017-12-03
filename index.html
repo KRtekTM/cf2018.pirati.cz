@@ -110,7 +110,7 @@
             <li>projednává a schvaluje výroční zprávu předsedy strany, výroční finanční zprávu,</li>
             <li>mimořádně přezkoumává pravomocné rozhodnutí jiného orgánu strany.</li>
           </ul>
-          <div class="textRight smallerText italic"><a href="http://wiki.pirati.cz/cf">zdroj</a></div>
+          <div class="textRight smallerText italic"><a href="https://wiki.pirati.cz/cf">zdroj</a></div>
         </p>
       </div>
     </div>
@@ -136,10 +136,10 @@
 
     <div id="footer">
       <div class="content">
-        <a href="http://pirati.cz/"><img src="images/logo-pirati.png" alt="Pirátská strana - logo" /></a>
+        <a href="https://pirati.cz/"><img src="images/logo-pirati.png" alt="Pirátská strana - logo" /></a>
 
         <div class="floatRight">
-          <span class="copyleft">©</span>2017 <a href="http://pirati.cz/">Česká pirátská strana</a> - všechna práva vyhlazena<br />
+          <span class="copyleft">©</span>2017 <a href="https://pirati.cz/">Česká pirátská strana</a> - všechna práva vyhlazena<br />
           <br />
           <div class="smallerText">Webdesign <a href="http://krtkovo.eu/">Ondřej Kotas</a><br />
           zveřejněno pod licencí <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</a>
@@ -326,6 +326,19 @@
               Informace doplníme co nejdříve.
             </p>
           </div>
+          <!--
+          <h2>Ke stažení</h2>
+          <p>
+            <ul>
+              <li>
+                <a href="images/cf2018.png">Logo akce (rastr)</a>
+              </li>
+              <li>
+                <a href="images/cf2018.svg">Logo akce (vektor)</a>
+              </li>
+            </ul>
+          </p>
+          -->
         </div>
       </div>
     </div>
@@ -353,8 +366,9 @@
             	var mymap = L.map('osm-map').setView([49.18549, 16.58540], 15);
 L.marker([49.18549, 16.58540]).addTo(mymap);
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mymap);
             </script>
   </body>
