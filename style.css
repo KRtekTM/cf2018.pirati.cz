@@ -200,9 +200,10 @@ div.content {
   line-height: normal;
 }
 
-#info a:hover {
-  color: #fff;
+#info a:hover, #info a:hover span.textBlink {
   transition: all 0.2s ease-in-out;
+  animation: none !important;
+  color: #fff !important;
 }
 
 #info a div {
@@ -278,6 +279,15 @@ div.content {
 
 .italic {
   font-style: italic;
+}
+
+.textBlink {
+  animation: blinker 3s linear infinite;
+  color: #000;
+}
+
+@keyframes blinker {
+  50% { color: #60c; }
 }
 
 #scroll {

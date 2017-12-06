@@ -122,7 +122,7 @@
         <h2 class="textCenter" id="countdown"></h2>
 
         <a href="https://ec.europa.eu/eusurvey/runner/pirati-cf-2018-brno"><div><span>Registrační formulář</span></div></a>
-        <a href="#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');"><div><span>Zapoj se (dobrovolníci)</span></div></a>
+        <a href="#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span class="textBlink">Zapoj se (dobrovolníci)</span></div></a>
         <a href="#info" onclick="javascript:$('#preparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');"><div><span>PreParty</span></div></a>
         <a href="#info" onclick="javascript:$('#ubytovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');"><div><span>Kde přespím?</span></div></a>
         <a href="#info" onclick="javascript:$('#mapa').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Jak se dostanu<br />na místo?</span></div></a>
@@ -154,12 +154,42 @@
         <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
 
         <div class="inner-content">
-          <h1 class="textLeft">Zapoj se!</h1>
-          <div class="textCenter">
-            <img src="images/working.png" alt="Děláme na tom!" />
-            <p>
-              Informace doplníme co nejdříve.
-            </p>
+          <h1 class="textLeft">Zapoj se jako dobrovolník</h1>
+
+          <h2>Kam se nahlásit</h2>
+          <p>
+            Vyplň registrační formulář <a href="https://ec.europa.eu/eusurvey/runner/6879c7c2-35cb-64b4-22e4-07a7da1dd0bf">dobrovolníka</a> a my se Ti ozveme s bližšími informacemi. V případě jakýchkoliv dotazů ohledně tvé pomoci kontaktuj <a href="https://forum.pirati.cz/dvaidx-u11635/">Davida O.</a> (tel. 604221773, <a href="mailto:david@otoupalik.cz">david@otoupalik.cz</a>).
+          </p>
+
+          <h2>Koho hledáme</h2>
+          <p>
+            <ul>
+              <li>cca 5 dobrovolníků na registrační místo | sobota 8:00 až do doby potřebné k akreditaci členů</li>
+              <li>cca 2-4 dobrovolníky k zajištění dalších potřebných věcí (příprava prostor, běžná agenda) | sobota i neděle</li>
+              <li>cca 2-3 dobrovolníky k technice, která bude zajišťovat on-line streaming (předpokládáme technické zkušenosti) | sobota i neděle</li>
+            </ul>
+           </p>
+          </p>
+
+          <h2>Musím být k dispozici po celou dobu?</h2>
+          <p>
+            Ne. Budeme rádi za každou pomoc. Největší nápor bude mezi 8:30 až 10:00 v sobotu na registraci. Pak už to zvládneme v menším počtu. Během dne určitě zvládneš pokec s kamarády nebo známými, tak aby sis CF 2018 taky mohl(a) užít.<br />
+          </p>
+
+          <h2>Co za to získám?</h2>
+          <p>
+            Peníze nenabízíme. Získáš dobrý pocit, skvělý zážitek, spoustu nových kontaktů a pirátské body. Vhodné také pro zájemce, kteří jsou čekatelé na členství u Pirátů a nebo o tom teprve uvažují. <a href="https://ec.europa.eu/eusurvey/runner/6879c7c2-35cb-64b4-22e4-07a7da1dd0bf">Registruj se jako dobrovolník</a> a užij si CF 2018 z první řady.<br />
+          </p>
+
+          <h2>Adresa jednacího sálu</h2>
+          <p>
+            Kongresové centrum hotelu Voroněž<br />
+            Křížkovského 458/47<br />
+            Brno
+          </p>
+          <div class="iframe">
+            <div id="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText">Zobrazit velkou mapu</a><br />&nbsp;
           </div>
         </div>
       </div>
