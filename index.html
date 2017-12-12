@@ -84,7 +84,7 @@
 
   </head>
 
-  <body onload="javascript:getPhoto();translate();showFormResult();">
+  <body>
     <a id="scroll" href="#topGraphic"><img src="images/backtotop.png" alt="back to top" /></a>
 
     <div id="topGraphic">
@@ -122,15 +122,15 @@
         <h2 class="textCenter" id="countdown"></h2>
 
         <a href="https://ec.europa.eu/eusurvey/runner/pirati-cf-2018-brno" rel="external"><div><span>Registrační formulář</span></div></a>
-        <a href="#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span class="textBlink">Zapoj se (dobrovolníci)</span></div></a>
-        <a href="#info" onclick="javascript:$('#preparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>PreParty</span></div></a>
-        <a href="#info" onclick="javascript:$('#ubytovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Kde přespím?</span></div></a>
-        <a href="#info" onclick="javascript:$('#mapa').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Jak se dostanu<br />na místo?</span></div></a>
-        <a href="#info" onclick="javascript:$('#program').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Program zasedání</span></div></a>
-        <a href="#info" onclick="javascript:$('#stream').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Živý přenos</span></div></a>
-        <a href="#info" onclick="javascript:$('#stravovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Kde se najím?</span></div></a>
-        <a href="#info" onclick="javascript:$('#media').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Pro média</span></div></a>
-        <a href="#info" onclick="javascript:$('#afterparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>AfterParty</span></div></a>
+        <a id="block_zapojSe" href="?p=zapojSe#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span class="textBlink">Zapoj se (dobrovolníci)</span></div></a>
+        <a id="block_preParty" href="?p=preParty#info" onclick="javascript:$('#preparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>PreParty</span></div></a>
+        <a id="block_ubytovani" href="?p=ubytovani#info" onclick="javascript:$('#ubytovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Kde přespím?</span></div></a>
+        <a id="block_jakNaMisto" href="?p=jakNaMisto#info" onclick="javascript:$('#mapa').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Jak se dostanu<br />na místo?</span></div></a>
+        <a id="block_program" href="?p=program#info" onclick="javascript:$('#program').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Program zasedání</span></div></a>
+        <a id="block_stream" href="?p=stream#info" onclick="javascript:$('#stream').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Živý přenos</span></div></a>
+        <a id="block_stravovani" href="?p=stravovani#info" onclick="javascript:$('#stravovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Kde se najím?</span></div></a>
+        <a id="block_media" href="?p=media#info" onclick="javascript:$('#media').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Pro média</span></div></a>
+        <a id="block_afterParty" href="?p=afterParty#info" onclick="javascript:$('#afterparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>AfterParty</span></div></a>
       </div>
     </div>
 
@@ -719,6 +719,14 @@
   	maxZoom: 18,
   	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(mymap);
+</script>
+
+<script>
+var url = new URL(window.location.href);
+var p = url.searchParams.get("p");
+console.log(p);
+
+$("#block_" + p).click();
 </script>
   </body>
 </html>
