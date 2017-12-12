@@ -48,6 +48,16 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  margin: 25px 0 6px 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 6px 0 6px 0;
+  padding: 0;
+}
+
 a:link, a:visited {
   color: #60c;
   text-decoration: underline;
