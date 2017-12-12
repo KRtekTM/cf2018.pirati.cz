@@ -286,6 +286,15 @@ div.content {
   color: #000;
 }
 
+.listWithImages li {
+  list-style: none;
+  padding: 0 0 20px 0;
+}
+
+.listWithImages img {
+  border: solid 1px #ccc;
+}
+
 @keyframes blinker {
   50% { color: #60c; }
 }
