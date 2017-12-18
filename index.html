@@ -201,12 +201,27 @@
 
         <div class="inner-content">
           <h1 class="textLeft">PreParty</h1>
-          <div class="textCenter">
-            <img src="images/working.png" alt="Děláme na tom!" />
-            <p>
-              Informace doplníme co nejdříve.
-            </p>
+          <p>
+            Preparty večer před zasedáním v kavárně nad základnou brněnských Pirátů!
+          </p>
+
+          <div class="iframe">
+            <div id="mapa-preparty" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
           </div>
+
+          <p>
+            Místo: Zahrada Ambrosia, Údolní 37, Brno<br />
+            Kdy: v pátek 6.1.2018 od 19:00 do 00:00
+          </p>
+
+          <p>
+            Kavárnu máme rezervovanou celou, avšak její kapacitu ještě navýšíme, jelikož přímo pod ní se nachází Pirate Space Brno - základna brněnských Pirátů. V ní najde útočiště každý, jemuž nevadí kouř či nějaké ty škodlivé emise.
+          </p>
+
+          <h2>Jak se dostanu na preparty?</h2>
+          <p>
+            Šalinou č. 4 směr Náměstí Míru a vystoupíte na zastávce <b>Obilní trh</b>.
+          </p>
         </div>
       </div>
     </div>
@@ -232,7 +247,6 @@
           <h2>Jak se dostanu do hostelu Fléda</h2>
           <div class="iframe">
             <div id="mapa-fleda" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a>
           </div>
           <p>
             <h3>Přijedu autem</h3>
@@ -252,7 +266,6 @@
           <h2>Jak se dostanu do hostelu Eleven (Dominikánska 11, přístup až k hostelu pouze pěšky)</h2>
           <div class="iframe">
             <div id="mapa-eleven" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a>
           </div>
           <p>
             <h3>Přijedu autem</h3>
@@ -570,12 +583,11 @@
 
           <div class="iframe">
             <div id="mapa-afterparty" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a>
           </div>
 
           <p>
             Místo: klub Fléda, Štefánikova 24, Brno<br />
-            Čas: od 19:00 do ??:??<br />
+            Kdy: v sobotu 6.1.2018 od 19:00 do ??:??<br />
             Program: DJ Noisecrashers, další se připravuje
           </p>
 
@@ -664,6 +676,21 @@
   });
 
   L.marker([49.21002, 16.60345]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-preparty', {
+    center: [49.1980810, 16.5974587],
+    zoom: 19,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.1980810, 16.5974587]).addTo(mymap);
 
   L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   	maxZoom: 18,
