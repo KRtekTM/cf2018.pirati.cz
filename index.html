@@ -121,7 +121,7 @@
         <h1 class="textCenter">Informace k zasedání 6.-7. ledna 2018</h1>
         <h2 class="textCenter" id="countdown"></h2>
 
-        <a href="https://cf2018.pirati.cz/registrace/" rel="external"><div><span>Registrační formulář</span></div></a>
+        <a id="block_registrace" href="?p=registrace#info" onclick="javascript:$('#registrace').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Co po registraci?</span></div></a>
         <a id="block_zapojSe" href="?p=zapojSe#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span class="textBlink">Zapoj se (dobrovolníci)</span></div></a>
         <a id="block_preParty" href="?p=preParty#info" onclick="javascript:$('#preparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Páteční<br />večírek</span></div></a>
         <a id="block_ubytovani" href="?p=ubytovani#info" onclick="javascript:$('#ubytovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));"><div><span>Kde přespím?</span></div></a>
@@ -149,6 +149,21 @@
     </div>
 
 <!-- popup windows -->
+    <div id="registrace" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Co po registraci?</h1>
+          <p>
+            Pokud jste zaregistrován přes formulář, pak si ráno před zasedáním vyzvednete svou jmenovku a další informace, které jsou pro vás připraveny pěkně pohromadě.<br />
+            <br />
+            Nestihl/a jste se zaregistrovat a jste člen strany? Nevadí, i na to jsme připraveni! Stačí přijít k pultíku, kde si registrovaní vyzvedávají jmenovky a zde se o vás postaráme.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div id="zapojse" class="popup">
       <div class="inner">
         <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
@@ -365,12 +380,21 @@
 
         <div class="inner-content">
           <h1 class="textLeft">Program zasedání</h1>
-          <div class="textCenter">
-            <img src="images/working.png" alt="Děláme na tom!" />
-            <p>
-              Informace doplníme co nejdříve.
-            </p>
-          </div>
+          
+          <p>
+            <h2>Sobota:</h2>
+            A 10.00-11.00 - Zahájení; Projevy kandidátů na předsedu strany, otázky<br /><br />
+            B 11.00-12.00 - 1. kolo volby předsedy (hlasování); Změny stanov 1 (rozprava)<br /><br />
+            C 12.00-13.00 - Vyhlášení výsledků 1. kola volby předsedy (v případě jediného kandidáta bude hlasování pokračovat až do 13.00), případné 2. kolo volby předsedy (hlasování); Oběd<br /><br />
+            D 13.00-14.00 - Vyhlášení výsledků volby předsedy; Projevy kandidátů na místopředsedy, otázky<br /><br />
+            E 14.00-15.00 - Pokračování rozpravy k volbě místopředsedů<br /><br />
+            F 15.00-16.00 - 1 kolo volby místopředsedů (hlasování); Změny stanov 2 (rozprava)<br /><br />
+            G 16.00-17.00 - Vyhlášení výsledků 1. kola volby místopředsedů, 2. kolo volby místopředsedů (hlasování); 1. kolo hlasování o změnách stanov; Informace o senátních volbách 2018; Zpráva předsedy o stavu strany<br /><br />
+            H 17.00-18.00 - Vyhlášení výsledků volby místopředsedů; případné 2. kolo hlasování o změnách stanov; projednání principů důležitých pro upgrade strany (zejména pozice vedoucích odborů - politická garance vs. zaměstnávání a servisně-administrativní funkce), jejich případné doplnění (schvalování po zasedáníi online) - projednání pomocí participativních nástrojů (např. lístečkování); debata o dosavadním upgradu, organizačním schématu strany, pozici a podpoře odborných garantů a jejich spolupráci s poslanci zodpovědnými za danou problematiku ve sněmovně a celou pracovní skupinou a 2) zadání výběrového řízení - probrání výsledné vize pro upgrade, hlasování opět po zasedání online + nastavení skupin a workshopů na neděli (Olga)<br />
+
+            <h2>Neděle:</h2>
+            workshopy viz pad <a href="https://pad.pirati.cz/p/cf2018nedele">https://pad.pirati.cz/p/cf2018nedele</a>
+          </p>
         </div>
       </div>
     </div>
